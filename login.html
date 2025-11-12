@@ -1,0 +1,109 @@
+<head>
+  <title>The Bulltower - Login</title>
+  <link rel="stylesheet" href="mainCssFile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="newlogo.jpg" id="logo" alt="The Bulltower Logo">
+      <div class="companyname">
+        <div class="topcompany">THE</div>
+        <div class="company">BULLTOWER</div>
+      </div>
+    </div>
+
+   
+
+    <nav class="about">
+      <a href="home.html" class="box-details"><i class="fa-solid fa-user"></i>HOME</a>
+      <a href="FEATURES.html" class="box-details"><i class="fa-solid fa-star"></i> FEATURES</a>
+      <a href="dashboard.html" class="box-details"><i class="fa-solid fa-chart-line"></i> DASHBOARD</a>
+      <a href="trading-guide.html" class="box-details"><i class="fa-solid fa-book"></i> GUIDE</a>
+      <a href="contact.html" class="box-details"><i class="fa-solid fa-envelope"></i> CONTACT</a>
+    </nav>
+
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+  <div class="company-title">
+    <div class="top">THE</div>
+    <div class="main">BULLTOWER</div>
+    <div class="guide">🔐 LOGIN PANEL</div>
+  </div>
+
+  <button class="openBtn" onclick="document.getElementById('loginModal').style.display='block'">Login</button>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('loginModal').style.display='none'">&times;</span>
+      <div class="imgcontainer">
+        <img src="newlogo.jpg" id="logo" alt="The Bulltower Logo">
+      </div>
+
+      <div id="error" class="error-msg">Please enter username and password</div>
+
+      <form onsubmit="return validateLogin()">
+        <div class="form-group">
+          <input type="text" id="uname" required placeholder=" ">
+          <label for="uname">Username</label>
+          <span class="icon">👤</span>
+        </div>
+
+        <div class="form-group">
+          <input type="password" id="psw" required placeholder=" e">
+          <label for="psw">Password</label>
+          <span class="icon">🔒</span>
+        </div>
+
+        <button type="submit">Login</button>
+        <button type="button" class="signupbtn">Sign Up</button>
+
+        <div class="psw">Forgot <a href="#">password?</a></div>
+      </form>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>THE BULLTOWER</h3>
+          <p>A professional trading platform helping you become a Super Trader.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <p><a href="about.html">About Us</a></p>
+          <p><a href="trading-guide.html">Trading Guide</a></p>
+          <p><a href="login.html">Market Analysis</a></p>
+          <p><a href="login.html">Support</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>📞 +91-79761-11105</p>
+          <p>📧 Abhischskkumawat7999@gmail.com</p>
+          <p>📍 Rajasthan, India</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function validateLogin() {
+      var user = document.getElementById("uname").value;
+      var pass = document.getElementById("psw").value;
+  
+      if (user === "Rajkumawat00" && pass === "R@jkumawat") {
+        window.location.href = "https://www.instagram.com/";
+        return false; // Prevent form reload
+      } else {
+        alert("❌ Incorrect username or password!");
+        return false; // Prevent form reload
+      }
+    }
+  </script>
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box; 
+ }
+
+ body 
+ {
+   font-family: 'Segoe UI', Tahoma, sans-serif;
+   background-color: #0f0f0f;
+   color: wheat;
+   margin: 0;
+   padding: 0;
+ }
+
+ .company-title 
+ {
+   text-align: center;
+   padding: 40px 0 10px;
+ }
+
+ .company-title .top 
+ {
+   font-size: 20px;
+   letter-spacing: 4px;
+   color: gold;
+ }
+
+ .company-title .main 
+ {
+   font-size: 40px;
+   font-weight: bold;
+   color: #FFD700;
+   text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+ }
+
+ .company-title .guide 
+ {
+   font-size: 22px;
+   color: #ffdb58;
+   margin-top: 10px;
+ }
+
+ button.openBtn 
+ {
+   background-color: goldenrod;
+   color: black;
+   padding: 14px 20px;
+   margin: 30px auto;
+   display: block;
+   border: none;
+   font-size: 16px;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+
+ button.openBtn:hover {
+   background-color: gold;
+   transform: scale(1.05);
+ }
+
+ .modal {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0; top: 0;
+   width: 100%; height: 100%;
+   background-color: rgba(0, 0, 0, 0.7);
+ }
+
+ @keyframes zoomFade {
+   from { opacity: 0; transform: scale(0.7); }
+   to { opacity: 1; transform: scale(1); }
+ }
+
+ .modal-content {
+     background-color: #22223a;
+   margin: 8% auto;
+   border: 2px solid orange;
+   border-radius: 10px;
+   padding: 20px;
+   width: 90%;
+   max-width: 400px;
+   color: wheat;
+   animation: zoomFade 0.5s ease-in-out;
+   position: relative;
+ }
+
+ .imgcontainer {
+   text-align: center;
+   margin-bottom: 20px;
+ }
+
+ .imgcontainer img {
+   width: 120px;
+   border-radius: 50%;
+   border: 3px solid gold;
+ }
+
+ .close {
+   position: absolute;
+   right: 15px;
+   top: 10px;
+   font-size: 28px;
+   color: wheat;
+   cursor: pointer;
+ }
+
+ .close:hover { color: red; }
+
+ .form-group {
+   position: relative;
+   margin-bottom: 25px;
+ }
+
+ .form-group input {
+   width: 100%;
+   padding: 12px 12px 12px 38px;
+   background-color: #3b3b5a;
+   border: 1px solid orange;
+   color: wheat;
+   font-size: 16px;
+   border-radius: 5px;
+   outline: none;
+   transition: 0.3s;
+ }
+
+ .form-group input:hover,
+ .form-group input:focus,
+ .form-group input:not(:placeholder-shown) {
+     background-color: #3b3b5a;
+   border-color: gold;
+   box-shadow: 0 0 5px gold;
+ }
+
+ .form-group input::placeholder {
+   color: transparent;
+ }
+
+ .form-group label {
+   position: absolute;
+   left: 38px;
+   top: 12px;
+   color: #aaa;
+   background-color: #3b3b5a;
+   padding: 0 5px;
+   transition: 0.3s ease;
+   pointer-events: none;
+ }
+
+ .form-group input:focus + label,
+ .form-group input:not(:placeholder-shown) + label,
+ .form-group input:hover + label {
+   top: -10px;
+   left: 35px;
+   font-size: 13px;
+   color: gold;
+ }
+
+ .form-group .icon {
+   position: absolute;
+   top: 12px;
+   left: 12px;
+   font-size: 18px;
+   color: rgb(136, 255, 0);
+   transition: 0.3s;
+ }
+
+ .form-group input:focus ~ .icon,
+ .form-group input:not(:placeholder-shown) ~ .icon,
+ .form-group input:hover ~ .icon {
+   top: -10px;
+   font-size: 14px;
+ }
+
+ button[type=submit], .signupbtn {
+   background-color: goldenrod;
+   color: black;
+   border: none;
+   padding: 12px;
+   width: 100%;
+   margin-top: 10px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+
+ button[type=submit]:hover, .signupbtn:hover {
+   background-color: gold;
+   transform: scale(1.03);
+ }
+
+ .psw {
+   text-align: right;
+   font-size: 14px;
+   margin-top: 10px;
+ }
+
+ .psw a {
+   color: orange;
+   text-decoration: none;
+ }
+
+ .psw a:hover {
+   text-decoration: underline;
+ }
+
+ .error-msg {
+   background: #ff3333;
+   color: white;
+   padding: 8px;
+   border-radius: 5px;
+   text-align: center;
+   margin-bottom: 15px;
+   display: none;
+ }
+
+ @media screen and (max-width: 480px) {
+   .modal-content {
+     width: 90%;
+   }
+ }

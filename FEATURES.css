@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    background-color: rgba#1f1f3b;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: wheat;
+    padding-bottom: 100px;
+}
+
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+.main-box {
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.box1 {
+    border: 1px solid wheat;
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+    margin: 30px 4%;
+    vertical-align: top;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.box1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    border-color: gold;
+}
+
+.emoji {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.box1 span {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box1 p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: wheat;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.stats div h2 {
+    font-size: 36px;
+    color: gold;
+}
+
+.testimonial-section {
+    text-align: center;
+    margin: 60px auto;
+    color: white;
+}
+
+.testimonial-box {
+    border: 1px solid gold;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.05);
+}
+
+.faq {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.faq h2 {
+    color: gold;
+    margin-bottom: 20px;
+}
+
+.faq p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.cta {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cta button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: orange;
+}

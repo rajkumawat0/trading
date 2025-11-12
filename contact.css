@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box; 
+}
+body{
+    background-color: rgba#1f1f3b;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: wheat;
+    padding-bottom: 100px;
+}
+  
+
+  .companyname-contact {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+    color: gold;
+    margin-top: 80px;
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.3);
+  }
+
+  .intro-paragraph {
+    text-align: center;
+    font-size: 17px;
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin: 15px auto 40px auto;
+    max-width: 850px;
+    padding: 0 20px;
+  }
+
+  .main-container {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    padding: 35px;
+    border-radius: 15px;
+    background-color: #1f1f3b;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    border: 2px solid transparent;
+    transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.main-container:hover {
+    border: 2px solid rgb(255, 175, 27);
+    box-shadow: 0 0 30px rgba(255, 175, 27, 0.4); /* Optional: subtle glow on hover */
+}
+
+  .form-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: wheat;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid gold;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .form-group {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group-full {
+    flex: 1 1 100%;
+  }
+
+  label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: wheat;
+    font-size: 15px;
+  }
+
+  input, select, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background-color: #2a2a4d;
+    color: wheat;
+    transition: all 0.3s ease;
+    font-size: 15px;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: gold;
+    background-color: #33345e;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+  }
+
+  textarea {
+    resize: vertical;
+    height: 100px;
+    width: 70%;
+  }
+
+  .submit-button {
+    margin-top: 20px;
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 14px 35px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+  }
+
+  .submit-button:hover {
+    background-color: #b18c28;
+    transform: scale(1.05);
+    color: #1f1f3b;
+    box-shadow: 0 6px 14px rgba(177, 140, 40, 0.4);
+  }
+
+  @media(max-width: 768px) {
+    .form-group {
+      flex: 1 1 100%;
+    }
+  }

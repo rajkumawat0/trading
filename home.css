@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba#1f1f3b;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: wheat;
+    padding-bottom: 100px;
+}
+  
+.trading-dashboard {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 12000px;
+    margin: auto;
+    padding:  0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 16PX;
+    color: gold;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 17PX;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.live-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #00ff88;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 9s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.price-ticker {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.ticker-item {
+    text-align: center;
+    flex: 1 1 180px;
+    margin: 10px;
+}
+
+.ticker-symbol {
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.ticker-price {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.ticker-change {
+    font-size: 0.9rem;
+}
+
+.positive {
+    color: #00ff88;
+}
+
+.negative {
+    color: #ff4444;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.075);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.342);
+}

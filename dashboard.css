@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba#1f1f3b;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: wheat;
+    /* padding-bottom: 100px; */
+}
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #1b1b34;
+      border: 1px solid #333;
+      padding: 25px 30px;
+      margin: 30px 30px 30px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.04);
+    }
+
+    .card:hover {
+      border: 1px solid #f7a017;
+      transform: translateY(-3px);
+    }
+
+    .stock-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #f7a017;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .green { color: #00ff99; }
+    .red { color: #ff5555; }
+
+    .signal {
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+      border: none;
+      color: #fff;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+
+    .signal.buy {
+      background-color: #00c27a;
+    }
+    .signal.buy:hover {
+      background-color: #00985e;
+      transform: scale(1.05);
+    }
+
+    .signal.sell {
+      background-color: #e84343;
+    }
+    .signal.sell:hover {
+      background-color: #c73535;
+      transform: scale(1.05);
+    }
+
+    .signal.hold {
+      background-color: #f7c02b;
+      color: #1f1f1f;
+    }
+    .signal.hold:hover {
+      background-color: #d6a81c;
+      transform: scale(1.05);
+    }
+
+    .charts, .images-section {
+      margin-top: 60px;
+    }
+
+    .charts h2, .images-section h2 {
+      color: wheat;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    iframe {
+      border-radius: 10px;
+      margin-bottom: 50px;
+      border: none;
+    }
+
+    .images-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .image-box {
+      width: 85%;
+      max-width: 850px;
+      background-color: #1b1b34;
+      border: 2px solid #f7a017;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.08);
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      cursor: zoom-in;
+    }
+
+    .image-box:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-details {
+      padding: 16px 20px;
+      color: #cfcfcf;
+      font-size: 14px;
+      line-height: 1.6;
+      background-color: #151529;
+      border-top: 1px solid #f7a017;
+      transition: background 0.3s ease;
+    }
+
+    .image-box:hover .image-details {
+      background-color: #1e1e3d;
+    }
+
+    .image-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #f7a017;
+      color: #000;
+      padding: 5px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 13px;
+      z-index: 5;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-box:hover .image-badge {
+      opacity: 1;
+    }
+
+    /* Fullscreen Image Viewer */
+    #fullscreen-view {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #fullscreen-view img {
+      max-width: 90%;
+      max-height: 80%;
+      transition: transform 0.3s ease;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 32px;
+      color: #fff;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: #ff4444;
+    }
+
+    .zoom-controls {
+      margin-top: 20px;
+    }
+
+    .zoom-controls button {
+      font-size: 22px;
+      margin: 0 10px;
+      padding: 10px 16px;
+      border: none;
+      background: #f7a017;
+      color: #111;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .zoom-controls button:hover {
+      background: #d88f10;
+      transform: scale(1.1);
+    }
+
+    @media(max-width: 768px) {
+      .card { flex-direction: column; align-items: flex-start; gap: 15px; }
+      .image-box { width: 100%; }
+    }
